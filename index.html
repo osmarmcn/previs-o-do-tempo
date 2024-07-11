@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container{
+            width: 400px;
+            /* border: 2px solid black; */
+            padding: 1rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+             border-radius: 15px;
+             
+             background: rgba(0, 0, 0, 0.892);
+             color: #fff;
+
+            -webkit-box-shadow: 2px 3px 5px 5px rgba(0, 0, 0, 0.712);
+            -moz-box-shadow: 2px 3px 5px 5px rgba(0, 0, 0, 0.552);
+            box-shadow: 2px 3px 5px 5px rgba(0, 0, 0, 0.578);
+
+        }
+
+        .container .form{
+            display: flex;
+            gap: 1rem;
+           
+        }
+        .container  input{
+            width: 100%;
+            border-radius: 25px;
+            outline: none;
+            border: 2px solid transparent;
+
+            padding: 0 1.2rem;
+        }
+
+        .container .form .btn-form button{
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            /* padding: .3rem .4rem; */
+            border: 2px solid transparent;
+            outline: none;
+            cursor: pointer;
+
+            background: rgb(0, 0, 0);
+            color: #fff;
+
+            transition: .4s ease-in-out;
+
+        }
+
+        .container .form .btn-form button:hover{
+            border: 2px solid #fff;
+        }
+
+        .container .form button ion-icon {
+            font-size: 1.5rem;
+            font-weight: bold;
+           
+        }
+
+        .content{
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .content h1{
+            text-align: center;
+        }
+
+        .content .content-info{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .content .content-info .graus{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 1rem;
+            
+        }
+
+        .content .content-info .prec{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            
+        }
+
+        .content .content-info .prec span {
+            
+        }
+
+        .content .content-info .prec span ion-icon{
+            font-size: 1.5rem;
+            font-weight: bold;
+           
+        }
+
+        .paises{
+            width: 100%;
+          
+            display: flex;
+            justify-content:space-between ;
+            flex-wrap: wrap;
+            gap: 1rem;
+            
+            
+           
+        }
+        .paises .btn{
+            
+            display: flex;
+           
+
+        }
+
+        .paises .btn button{
+            width: 150px;
+            padding: .8rem 0;
+            border-radius: 30px;
+            border: 2px solid transparent;
+            outline: none;
+            background: rgba(0, 0, 0, 0.66);
+            color: #fff;
+            cursor: pointer;
+            transition: .5s ease-in-out;
+        }
+
+        .paises .btn button:hover{
+           border: 2px solid #fff;
+            
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="form">
+            <input type="search" id="input">
+            <div class="btn-form">
+                 <button><ion-icon name="search-outline" id="pesquisa"></ion-icon></button>
+            </div>
+           
+        </div>
+
+        <div class="content">
+            <h1 id="cidade">Tempo em Viena</h1>
+            <div class="content-info">
+                <div class="graus">
+                    <p id="temperatura">Temperatura: 27°C</p>
+                    <p id="umidade">umidade: 67%</p>
+                </div>
+
+                <div class="prec">
+                    <span id="icone"><ion-icon name="rainy-outline"></ion-icon></span>
+                    <img src="https://openweathermap.org/weather-conditions#How-to-get-icon-URL" alt="" id="icone">
+                    <p id="descricao">chuva leve</p>
+                </div>
+            </div>
+
+            <div class="paises">
+                <div class="btn">
+                    <button id="viena">viena</button>
+                </div>
+                <div class="btn">
+                    <button id="copenhague">copenhague</button>
+                </div>
+                <div class="btn">
+                    <button id="zurique">zurique</button>
+                </div>
+                <div class="btn">
+                    <button id="vancouver">vancouver</button>
+                </div>
+                <div class="btn">
+                    <button id="recife">recife</button>
+                </div>
+                <div class="btn">
+                    <button id="joaoPessoa">joão pessoa</button>
+                </div>
+                <div class="btn">
+                    <button id="natal">natal</button>
+                </div>
+                <div class="btn">
+                    <button id="maceio">maceió</button>
+                </div>
+                
+                    
+                
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
